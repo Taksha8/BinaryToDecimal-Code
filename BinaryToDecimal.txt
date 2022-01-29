@@ -1,0 +1,21 @@
+package com.company;
+import java.util.Scanner;
+ class Tom {
+    public int BinaryToDecimal(int n) {
+        int decimal = 0;
+        int weight = 1;
+        while (n > 0) {
+            int rem = n % 10;
+            decimal += rem * weight;
+            weight = weight * 2;
+            n = n / 10;                                                     
+        }
+        return decimal;
+}}
+public class ApnaClg_ConversionQues {
+    public static void main(String[] args) {
+        Tom o = new Tom();
+        int n;
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        System.out.println(o.BinaryToDecimal(n));}}
